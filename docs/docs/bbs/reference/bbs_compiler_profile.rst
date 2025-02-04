@@ -109,6 +109,8 @@ The simplified excerpt from gcc flexible profile is shown below:
        set(CMAKE_CXX_STANDARD 20)
    elseif(BDE_BUILD_TARGET_CPP23)
        set(CMAKE_CXX_STANDARD 23)
+   elseif(BDE_BUILD_TARGET_CPP26)
+       set(CMAKE_CXX_STANDARD 26)
    endif()
    ...
    set(CMAKE_CXX_FLAGS        ${DEFAULT_CXX_FLAGS} CACHE STRING "Default" FORCE)

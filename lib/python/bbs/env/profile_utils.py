@@ -73,13 +73,10 @@ def get_system_profile_path():
        Path to the system config file if it exists or None
     """
 
-    bde_root = os.environ.get("BDE_ROOT")
-
-    if bde_root:
-        config_path = Path(bde_root).joinpath("etc/bbs_build_profiles")
-        if config_path.exists() and os.access(config_path, os.R_OK):
-            print(f"Using system configuration: {config_path}", file=sys.stderr)
-            return config_path
+    config_path = Path(".").joinpath("bbs_build_profiles")
+    if config_path.exists() and os.access(config_path, os.R_OK):
+        print(f"Using system configuration: {config_path}", file=sys.stderr)
+        return config_path
 
     return None
 

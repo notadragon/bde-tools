@@ -38,6 +38,9 @@ set(CXX_WARNINGS
     "-Wno-sign-conversion "
     "-Wno-unknown-pragmas "
     "-Wno-unused-value "
+    "-Wno-deprecated "
+    "-Wno-uninitialized "
+    "-Wno-maybe-uninitialized "
     )
 
 string(CONCAT DEFAULT_CXX_FLAGS
